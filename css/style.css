@@ -160,7 +160,8 @@ ul li:hover {
 	}
 
 	ul li {
-		float: left;
+		display: inline-block;
+		float: none;
 		margin: 20px 20px 20px 0;
 		width: calc((100% - 148px) / 2);
 	}
