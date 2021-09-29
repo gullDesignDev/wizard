@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/wizard.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+	<title>Wizard</title>
+</head>
+<body>
+	<div class="container">
+		<div class="content image">
+		</div>
+		<div class="content">
+			<h1>Welcher Schlaftyp sind Sie?</h1>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, nam accusamus. Doloribus facere molestiae neque commodi autem assumenda, magni, excepturi repellendus laboriosam incidunt ut itaque delectus maxime id optio eius.</p>
+			<button class="btn btn-info" id="start" onclick="init()">Beginnen</button>
+		</div>
+	</div>
+	<div class="container" id="wizard" style="display: none;">
+		<div class="content">
+			<p class="customerService">Brauchen Sie Hilfe? Kundendienst <a href="tel:058 455 40 40">058 455 40 40</a></p>
+			<div class="questionContainer">
+				<div id="q100" style="display: none;">
+					<h2 class="question">Was haben Sie für ein Klima?</h2>
+					<ul>
+						<li onclick="run(this.id)" id="10010" data-point="1">Ich friere</li>
+						<li onclick="run(this.id)" id="10020" data-point="2">Ich schwitze</li>
+						<li onclick="run(this.id)" id="10030" data-point="3">alles ok</li>
+					</ul>
+				</div>
+
+				<div id="q200" style="display: none;">
+					<h2 class="question">Haben Sie besondere Ansprüche?</h2>
+					<ul>
+						<li onclick="run(this.id)" id="20010" data-point="10">Allergiker</li>
+						<li onclick="run(this.id)" id="20020" data-point="15">Veganer</li>
+						<li onclick="run(this.id)" id="20030" data-point="20">nichts davon</li>
+					</ul>
+				</div>
+				<div id="q300" style="display: none;">
+					<h2 class="question">Welches Material bevorzugen Sie?</h2>
+					<ul>
+						<li onclick="run(this.id)" id="30010" data-point="30">Synthetisch - Polyester, Mikrofaser</li>
+						<li onclick="run(this.id)" id="30020" data-point="35">Naturfaser (Pflanzlich) Tencel, Baumwolle, Seide etc.</li>
+						<li onclick="run(this.id)" id="30030" data-point="40">Naturhaar (Tierisch) Wolle, Kamel, Kaschmir</li>
+						<li onclick="run(this.id)" id="30040" data-point="45">Daunen - Federn, Gänse, Enten</li>
+						<li onclick="run(this.id)" id="30050" data-point="50">Alle.</li>
+					</ul>
+				</div>
+				
+				<!-- Result Page -->
+				<div id="end" style="display: none;">
+					<h2 class="question">Vielen Dank für Ihre Teinahme.</h2>
+					<p>Wir haben aufgrund ihrerer getroffenen Auswahl, die für Sie passenden Artikel zusammengestellt. Sie gelangen über den angegebenen Link zu den Produkten. Meine <a id="targetLink" target="_blank" href="">Produkte anzeigen.</a></p>
+					<script>
+					getTargetLink();
+					a = document.getElementById('targetLink');
+					console.log(link);
+						a.setAttribute("href", link);
+					</script>
+				</div>
+			</div>
+		</div>
+		<!-- <!-- <img onclick="run(this.id)" data-point=1 src="img/Bild1.jpg" alt="Bild1" id="image1"> -->
+		<!-- <img onclick="run(this.id)" data-point=1 src="img/Bild1.jpg" alt="Bild1" id="image1"> -->
+		<!-- <img onclick="run(this.id)" data-point=1 src="img/Bild1.jpg" alt="Bild1" id="myButton"> -->
+
+		<!-- <!-- <ul class="" id="question">
+			<li id="question1">
+				<!-- <img onclick="run(this.id)" data-point=1 src="img/Bild1.jpg" alt="Bild1" id="image1"> -->
+				<!-- <figcaption>Fig.1 - Blume.</figcaption>
+			</li>
+			<li id="question2">
+				<img onclick="run(this.id)" data-point=10 src="img/Bild7.jpg" alt="Bild1" id="image2">
+				<figcaption>Fig.2 - Trulli, Puglia, Italy.</figcaption>
+			</li>
+			<li id="question3">
+				<img onclick="run(this.id)" data-point=30 src="img/Bild3.jpg" alt="Bild1" id="image3">
+				<figcaption>Fig.3 - Orange Utan</figcaption>
+			</li>
+		</ul> -->
+	</div>
+	<footer>
+		
+	</footer>
+</body>
+</html>

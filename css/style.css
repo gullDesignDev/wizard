@@ -1,0 +1,106 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.1em;
+	background-color: #eee;
+	color: #444;
+}
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 2rem;
+}
+
+a {
+	color: #64c4ed;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+h1, h2, h3 { text-align: center; }
+
+h2.question {
+	font-size: 1.6em;
+	margin: 4% 0 2% 0;
+}
+
+.btn {
+	float: right;
+    padding: .375rem .75rem;
+    border-width: 1px;
+    -webkit-box-shadow: 0 10px 20px -6px rgb(0 0 0 / 12%);
+    -moz-box-shadow: 0 10px 20px -6px rgba(0,0,0,.12);
+    box-shadow: 0 10px 20px -6px rgb(0 0 0 / 12%);
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+.btn.btn-info {
+    color: #fff;
+    border-color: #64c4ed;
+    background: #64c4ed;
+}
+
+button { cursor: pointer; }
+
+.customerService {
+	color: #ccc;
+	font-size: .85em;
+}
+
+.container {
+	width: 80%;
+	display: flex;
+	background-color: #fefefe;
+	border-radius: 20px;
+	box-shadow: 0 0 40px #aaa;
+	margin-bottom: 30px;
+}
+
+.content.image {
+	width: 60%;
+	background-image: url('../img/gesunder-schlaf.jpg');
+	background-size: cover;
+	background-position: center top;
+	border-radius: 20px 0 0 20px;
+}
+
+.content {
+	padding: 30px 50px;
+	border-radius: 0 20px 20px 0;
+}
+
+ul {
+	display: block;
+	float: left;
+    width: 100%;
+	padding: 0;
+	margin-top: 0;
+	list-style-type: none;
+}
+
+ul li {
+	float: left;
+	margin: 20px 20px 20px 0;
+	width: calc((100% - 148px) / 2);
+	padding: 20px 20px;
+	border-radius: 8px;
+	border: 2px solid #eee;
+}
+
+ul li:hover {
+	border: 2px solid #64c4ed; 
+	cursor: pointer;
+}
+
+/* ul li:nth-child(even) {
+	margin-right: 0;
+} */
