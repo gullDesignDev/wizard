@@ -63,10 +63,10 @@ function generateLink() {
 			break;
 	}
 
-	return link;
+	insertLink(link);
 }
 
-function getTargetLink()
+function insertLink(link)
 {
-	return link;
+	document.getElementById("targetLink").setAttribute("href", link);
 }
