@@ -25,7 +25,8 @@
 			<div class="questionContainer">
 				<div id="q100" style="display: none;">
 					<h2 class="question">Was haben Sie für ein Klima?</h2>
-					<ul>
+					<span class="step">1/3</span>
+					<ul class="question">
 						<li onclick="run(this.id)" id="10010" data-point="1">Ich friere</li>
 						<li onclick="run(this.id)" id="10020" data-point="2">Ich schwitze</li>
 						<li onclick="run(this.id)" id="10030" data-point="3">alles ok</li>
@@ -33,7 +34,8 @@
 				</div>
 				<div id="q200" style="display: none;">
 					<h2 class="question">Haben Sie besondere Ansprüche?</h2>
-					<ul>
+					<span class="step">2/3</span>
+					<ul class="question">
 						<li onclick="run(this.id)" id="20010" data-point="10">Allergiker</li>
 						<li onclick="run(this.id)" id="20020" data-point="15">Veganer</li>
 						<li onclick="run(this.id)" id="20030" data-point="20">nichts davon</li>
@@ -41,7 +43,8 @@
 				</div>
 				<div id="q300" style="display: none;">
 					<h2 class="question">Welches Material bevorzugen Sie?</h2>
-					<ul>
+					<span class="step">3/3</span>
+					<ul class="question">
 						<li onclick="run(this.id)" id="30010" data-point="30">Synthetisch - Polyester, Mikrofaser</li>
 						<li onclick="run(this.id)" id="30020" data-point="35">Naturfaser (Pflanzlich) Tencel, Baumwolle, Seide etc.</li>
 						<li onclick="run(this.id)" id="30030" data-point="40">Naturhaar (Tierisch) Wolle, Kamel, Kaschmir</li>
@@ -51,8 +54,14 @@
 				</div>
 				<!-- Result Page -->
 				<div id="end" style="display: none;">
-					<h2 class="question">Vielen Dank für Ihre Teinahme.</h2>
-					<p>Wir haben aufgrund ihrerer getroffenen Auswahl, die für Sie passenden Artikel zusammengestellt. Sie gelangen über den angegebenen Link zu den Produkten. Meine <a id="targetLink" target="_blank" href="">Produkte anzeigen.</a></p>
+					<h2 class="question">Vielen Dank für Ihre Teilnahme.</h2>
+					<p class="resultText">Sie haben die folgenden Antwortet abgegeben.</p>
+					<ul class="resultList" id="resultList">
+						
+					</ul>
+					<p>Wir haben aufgrund ihrerer getroffenen Auswahl, die für Sie passenden Artikel zusammengestellt. Sie gelangen über den angegebenen Link zu den Produkten.</p>
+					<button class="btn btn-info" id="targetLink" target="_blank" href="">Meine Produkte anzeigen.</button>
+						<!-- <a id="targetLink" target="_blank" href="">Meine Produkte anzeigen.</a> -->
 				</div>
 			</div>
 		</div>

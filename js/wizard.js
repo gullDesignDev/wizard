@@ -1,5 +1,6 @@
 let fValue = 0;
 let link = 'link leer';
+var results = [];
 
 function init() {
 	document.getElementById("q100").style.display="block";
@@ -26,9 +27,27 @@ function calculatePoints(number) {
 function run(objectID) {
 	var number = getPoint(objectIdentifier(objectID));
 	calculatePoints(number);
+	getSelectedValues(document.getElementById(objectID).innerHTML);
 	checkQuestion();
 	console.log("fValue: " + fValue);
-	console.log("Link: " + link);
+	// console.log("Link: " + link);
+	// console.log("Client has clicked: " + document.getElementById(objectID).innerHTML);
+}
+
+function getSelectedValues(item) {
+	results.push(item);
+}
+
+function returnResultListElements() {
+	var parent = document.getElementById("resultList");
+
+	//Create li with the results and append it with attributes to the parent
+	for (var i = 0; i < results.length; i++) {
+		var resultItem = document.createElement("li");
+		resultItem.setAttribute("class", "resultItem");
+		resultItem.innerHTML = results[i];
+		parent.appendChild(resultItem);
+	}
 }
 
 function checkQuestion() {
@@ -46,6 +65,7 @@ function checkQuestion() {
 		case (fValue >= 41):
 			document.getElementById("q300").style.display="none";
 			document.getElementById("end").style.display="block";
+			returnResultListElements();
 			generateLink();
 			break;
 	}

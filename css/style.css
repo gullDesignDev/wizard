@@ -49,9 +49,19 @@ h2.question {
     background: #64c4ed;
 }
 
+button#targetLink {
+	margin-bottom: 20px;
+}
+
 button { cursor: pointer; }
 
 .customerService {
+	color: #ccc;
+	font-size: .85em;
+}
+
+.step {
+	float: right;
 	color: #ccc;
 	font-size: .85em;
 }
@@ -79,7 +89,7 @@ button { cursor: pointer; }
 	border-radius: 0 20px 20px 0;
 }
 
-ul {
+ul.question {
 	display: block;
 	float: left;
     width: 100%;
@@ -88,7 +98,7 @@ ul {
 	list-style-type: none;
 }
 
-ul li {
+ul.question li {
 	float: left;
 	margin: 20px 20px 20px 0;
 	width: calc((100% - 148px) / 2);
@@ -97,12 +107,12 @@ ul li {
 	border: 2px solid #eee;
 }
 
-ul li:hover {
+ul.question li:hover {
 	border: 2px solid #64c4ed; 
 	cursor: pointer;
 }
 
-/* ul li:nth-child(even) {
+/* ul.question li:nth-child(even) {
 	margin-right: 0;
 } */
 
@@ -127,7 +137,7 @@ ul li:hover {
 		min-height: 200px;
 	}
 
-	ul li {
+	ul.question li {
 		float: none;
 		margin: 20px 20px 10px 0;
 		width: unset;
@@ -151,7 +161,7 @@ ul li:hover {
 		padding: 30px 50px;
 	}
 
-	ul li {
+	ul.question li {
 		display: inline-block;
 		float: none;
 		margin: 20px 20px 20px 0;
