@@ -6,8 +6,9 @@ function init() {
 	document.getElementById("q100").style.display="block";
 	document.getElementById("wizard").style.display="block";
 	document.getElementById("end").style.display="none";
+	removeResultListElements();
 	fValue = 0;
-	console.log("fValue: " + fValue);
+	results = [];
 }
 
 function objectIdentifier(objectID) {
@@ -30,6 +31,7 @@ function run(objectID) {
 	getSelectedValues(document.getElementById(objectID).innerHTML);
 	checkQuestion();
 	console.log("fValue: " + fValue);
+	console.log("results: " + results);
 	// console.log("Link: " + link);
 	// console.log("Client has clicked: " + document.getElementById(objectID).innerHTML);
 }
@@ -50,6 +52,14 @@ function returnResultListElements() {
 	}
 }
 
+function removeResultListElements()
+{
+	var parent = document.getElementById("resultList");
+	while (parent.firstChild) {
+		parent.removeChild(parent.lastChild);
+	}
+}
+
 function checkQuestion() {
 	switch (true) {
 		case (fValue < 10):
@@ -63,6 +73,8 @@ function checkQuestion() {
 			break;
 
 		case (fValue >= 41):
+			document.getElementById("q100").style.display="none";
+			document.getElementById("q200").style.display="none";
 			document.getElementById("q300").style.display="none";
 			document.getElementById("end").style.display="block";
 			returnResultListElements();
