@@ -72,10 +72,16 @@ function checkQuestion() {
 			document.getElementById("q300").style.display="block";
 			break;
 
-		case (fValue >= 41):
+		case (fValue < 243):
+			document.getElementById("q300").style.display="none";
+			document.getElementById("q400").style.display="block";
+			break;
+
+		case (fValue >= 284):
 			document.getElementById("q100").style.display="none";
 			document.getElementById("q200").style.display="none";
 			document.getElementById("q300").style.display="none";
+			document.getElementById("q400").style.display="none";
 			document.getElementById("end").style.display="block";
 			returnResultListElements();
 			generateLink();

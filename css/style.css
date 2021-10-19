@@ -20,7 +20,7 @@ a {
 	text-decoration: none;
 }
 
-h1, h2, h3 { text-align: center; }
+h1, h2, h3 { text-align: left; }
 
 h2.question {
 	font-size: 1.6em;
@@ -101,8 +101,9 @@ ul.question {
 
 ul.question li {
 	float: left;
+	vertical-align: top;
 	margin: 20px 20px 20px 0;
-	width: calc((100% - 148px) / 2);
+	width: calc((100% - 132px) / 2);
 	padding: 20px 20px;
 	border-radius: 8px;
 	border: 2px solid #eee;
