@@ -67,7 +67,7 @@ function checkQuestion() {
 			document.getElementById("q200").style.display="block";
 			break;
 		
-		case (fValue < 30):
+		case (fValue < 46):
 			document.getElementById("q200").style.display="none";
 			document.getElementById("q300").style.display="block";
 			break;
