@@ -32,7 +32,7 @@ function run(objectID) {
 	checkQuestion();
 	console.log("fValue: " + fValue);
 	console.log("results: " + results);
-	// console.log("Link: " + link);
+	console.log("Link: " + link);
 	// console.log("Client has clicked: " + document.getElementById(objectID).innerHTML);
 }
 
@@ -90,14 +90,18 @@ function checkQuestion() {
 }
 
 function generateLink() {
-	switch (fValue) {
+	switch (true) {
+		case (fValue >=1):
+			link = 'https://www.angela-bruderer.ch/de/schlafberatung-wizard-' + fValue;
+			break;
+
 		case 41:
 		case 56:
-			link = 'https://www.angela-bruderer.ch/de/top-angebote';
+			link = 'https://www.angela-bruderer.ch/de/schlafberatung-wizard-324';
 			break;
 
 		case 73:
-			link = 'https://www.angela-bruderer.ch/de/ausverkauf';
+			link = 'https://www.angela-bruderer.ch/de/schlafberatung-wizard-324';
 			break;
 	}
 
