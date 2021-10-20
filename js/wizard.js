@@ -1,10 +1,14 @@
 let fValue = 0;
 let link = 'link leer';
 var results = [];
+let debug = false;
 
 function init() {
 	document.getElementById("q100").style.display="block";
 	document.getElementById("wizard").style.display="block";
+	document.getElementById("q200").style.display="none";
+	document.getElementById("q300").style.display="none";
+	document.getElementById("q400").style.display="none";
 	document.getElementById("end").style.display="none";
 	removeResultListElements();
 	fValue = 0;
