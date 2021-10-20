@@ -33,11 +33,13 @@ function run(objectID) {
 	var number = getPoint(objectIdentifier(objectID));
 	calculatePoints(number);
 	getSelectedValues(document.getElementById(objectID).innerHTML);
-	checkQuestion();
-	console.log("fValue: " + fValue);
-	console.log("results: " + results);
-	console.log("Link: " + link);
-	// console.log("Client has clicked: " + document.getElementById(objectID).innerHTML);
+	checkQuestionByID(objectID);
+	if (debug) {
+		console.log("fValue: " + fValue);
+		console.log("Client has clicked: " + document.getElementById(objectID).innerHTML);
+		console.log("results: " + results);
+		console.log("Link: " + link);
+	}
 }
 
 function getSelectedValues(item) {
@@ -64,7 +66,52 @@ function removeResultListElements()
 	}
 }
 
-function checkQuestion() {
+function checkQuestionByID(objectID) {
+	if (objectID) {
+		if (debug) {
+			console.log("objectID: " + objectID);
+		}
+
+		switch (objectID) {
+			case "10010":
+			case "10020":
+			case "10030":
+				document.getElementById("q100").style.display="none";
+				document.getElementById("q200").style.display="block";
+			break;
+
+			case "20010":
+				document.getElementById("q200").style.display="none";
+				document.getElementById("q300").style.display="block";
+			break;
+
+			case "30010":
+				document.getElementById("q300").style.display="none";
+				document.getElementById("q400").style.display="block";
+			break;
+
+			case "20020":
+			case "20030":
+			case "30020":
+			case "30030":
+			case "30040":
+			case "30050":
+			case "40010":
+			case "40020":
+			case "40030":
+				document.getElementById("q100").style.display="none";
+				document.getElementById("q200").style.display="none";
+				document.getElementById("q300").style.display="none";
+				document.getElementById("q400").style.display="none";
+				document.getElementById("end").style.display="block";
+				returnResultListElements();
+				generateLink();
+			break;
+		}
+	}
+}
+
+function checkQuestionByPoints() {
 	switch (true) {
 		case (fValue < 10):
 			document.getElementById("q100").style.display="none";
