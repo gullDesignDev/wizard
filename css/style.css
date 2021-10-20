@@ -79,7 +79,8 @@ button { cursor: pointer; }
 
 .content.image {
 	width: 60%;
-	background-image: url('../img/gesunder-schlaf.jpg');
+	/* background-image: url('../img/gesunder-schlaf.jpg'); */
+	background-image: url('../img/211018_Ratgeber_Duvet_Kachel.jpg');
 	background-size: cover;
 	background-position: center top;
 	border-radius: 20px 0 0 20px;
