@@ -77,6 +77,7 @@ function checkQuestionByID(objectID) {
 			case "10020":
 			case "10030":
 				document.getElementById("q100").style.display="none";
+				tempID = objectID;
 				document.getElementById("q200").style.display="block";
 			break;
 
@@ -86,8 +87,18 @@ function checkQuestionByID(objectID) {
 			break;
 
 			case "30010":
-				document.getElementById("q300").style.display="none";
-				document.getElementById("q400").style.display="block";
+				if (tempID == "10020" || tempID == "10030") {
+					document.getElementById("q100").style.display="none";
+					document.getElementById("q200").style.display="none";
+					document.getElementById("q300").style.display="none";
+					document.getElementById("q400").style.display="none";
+					document.getElementById("end").style.display="block";
+					returnResultListElements();
+					generateLink();
+				} else {
+					document.getElementById("q300").style.display="none";
+					document.getElementById("q400").style.display="block";
+				}
 			break;
 
 			case "20020":
@@ -109,6 +120,7 @@ function checkQuestionByID(objectID) {
 			break;
 		}
 	}
+	console.log("tempID: " + tempID);
 }
 
 function checkQuestionByPoints() {
